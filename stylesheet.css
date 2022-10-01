@@ -1,0 +1,138 @@
+html{
+    height: 100%;
+    background: radial-gradient(circle, #fff, #ccc);
+}
+#container{
+    height: 600px;
+    width: 750px;
+    background-color: #4ecffa;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0px 0px rgb(8, 119, 147);
+    position: relative;
+}
+#score{
+    background-color: rgb(234, 227, 43);
+    color: #888E5F;
+    padding: 11px;
+    position: absolute;
+    left: 700px;
+    box-shadow: 0px 4px #9d8a53;
+}
+#correct{
+    position: absolute;
+    left: 200px;
+    background-color: #42e252;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+#wrong{
+    position: absolute;
+    left: 250px;
+    background-color: #f32420;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+#fruitsContainer{
+    width: 650px;
+    height: 400px;
+    margin: 50px auto 10px auto;
+    background-color: white;
+    box-shadow: 0px 4px #5c67dd;
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive , sans-serif;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+#instruction{
+    width: 450px;
+    height: 50px;
+    background-color: #B481D9;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 45px;
+    box-shadow: 0px 4px purple;
+}
+#choices{
+    width: 450px;
+    height: 100px;
+    margin: 5px auto;
+
+}
+.box{
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    transition: all 0.2s;
+}
+.box:hover, #startreset:hover{
+    background-color: #6346f0;
+    color: white;
+}
+.box:active, #startreset:active{
+    box-shadow: 0 0;
+    top: 4px;
+}
+#box4{
+    margin-right: 0px;
+}
+#startreset{
+    width: 85px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;
+}
+#trialsleft{
+    top: 10px;
+    width: 80px;
+    padding: 10px;
+    position: absolute;
+    /*top: 395px;
+    left: 390px;*/
+    background-color: rgb(234, 227, 43);
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+#gameover{
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(#F3CA6B, #F3766C);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 165px;
+    left: 145px;
+    z-index: 2;
+    display: none;
+}
+.life{
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+.fruit{
+    display: none;
+    position: absolute;
+}

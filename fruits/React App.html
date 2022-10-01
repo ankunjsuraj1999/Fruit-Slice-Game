@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://song-vote-algorand-starter-project-front-end.ankunj1.repl.co/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="https://song-vote-algorand-starter-project-front-end.ankunj1.repl.co/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="https://song-vote-algorand-starter-project-front-end.ankunj1.repl.co/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="https://song-vote-algorand-starter-project-front-end.ankunj1.repl.co/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUztFQUNUOztjQUVZO0VBQ1osbUNBQW1DO0VBQ25DLGtDQUFrQztBQUNwQzs7QUFFQTtFQUNFO2FBQ1c7QUFDYiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.mainContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 60px;
+}
+
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 625px;
+  max-height: 80vh;
+  margin: 0px;
+  padding:25px;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #000000
+}
+
+.bio {
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.mathButton {
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.count {
+  text-align: center;
+  font-size: 22px;
+  color: black;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvQXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7RUFDdkIsV0FBVztFQUNYLGdCQUFnQjtBQUNsQjs7O0FBR0E7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHVCQUF1QjtFQUN2QixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCO0FBQ0Y7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsY0FBYztFQUNkLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLGdCQUFnQjtBQUNsQjs7QUFFQTtFQUNFLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsWUFBWTtFQUNaLFNBQVM7RUFDVCxrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLFlBQVk7QUFDZCIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluQ29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tdG9wOiA2MHB4O1xufVxuXG5cbi5kYXRhQ29udGFpbmVyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG1heC13aWR0aDogNjI1cHg7XG4gIG1heC1oZWlnaHQ6IDgwdmg7XG4gIG1hcmdpbjogMHB4O1xuICBwYWRkaW5nOjI1cHg7XG4gIGJvcmRlci1yYWRpdXM6IDhweDtcbiAgYmFja2dyb3VuZDogI2ZmZmZmZjtcbn1cblxuLmhlYWRlciB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC1zaXplOiAzMnB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBjb2xvcjogIzAwMDAwMFxufVxuXG4uYmlvIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBjb2xvcjogIzAwMDAwMDtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBtYXJnaW4tdG9wOiAxMnB4O1xuICBtYXJnaW4tYm90dG9tOiAxNnB4O1xuICBsaW5lLWhlaWdodDogMS40O1xufVxuXG4ubWF0aEJ1dHRvbiB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgbWFyZ2luLXRvcDogMTZweDtcbiAgcGFkZGluZzogOHB4O1xuICBib3JkZXI6IDA7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbn1cblxuLmNvdW50IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250LXNpemU6IDIycHg7XG4gIGNvbG9yOiBibGFjaztcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style id="walletconnect-style-sheet">:root {<br>  --animation-duration: 300ms;<br>}<br><br>@keyframes fadeIn {<br>  from {<br>    opacity: 0;<br>  }<br>  to {<br>    opacity: 1;<br>  }<br>}<br><br>@keyframes fadeOut {<br>  from {<br>    opacity: 1;<br>  }<br>  to {<br>    opacity: 0;<br>  }<br>}<br><br>.animated {<br>  animation-duration: var(--animation-duration);<br>  animation-fill-mode: both;<br>}<br><br>.fadeIn {<br>  animation-name: fadeIn;<br>}<br><br>.fadeOut {<br>  animation-name: fadeOut;<br>}<br><br>#walletconnect-wrapper {<br>  -webkit-user-select: none;<br>  align-items: center;<br>  display: flex;<br>  height: 100%;<br>  justify-content: center;<br>  left: 0;<br>  pointer-events: none;<br>  position: fixed;<br>  top: 0;<br>  user-select: none;<br>  width: 100%;<br>  z-index: 99999999999999;<br>}<br><br>.walletconnect-modal__headerLogo {<br>  height: 21px;<br>}<br><br>.walletconnect-modal__header p {<br>  color: #ffffff;<br>  font-size: 20px;<br>  font-weight: 600;<br>  margin: 0;<br>  align-items: flex-start;<br>  display: flex;<br>  flex: 1;<br>  margin-left: 5px;<br>}<br><br>.walletconnect-modal__close__wrapper {<br>  position: absolute;<br>  top: 0px;<br>  right: 0px;<br>  z-index: 10000;<br>  background: white;<br>  border-radius: 26px;<br>  padding: 6px;<br>  box-sizing: border-box;<br>  width: 26px;<br>  height: 26px;<br>  cursor: pointer;<br>}<br><br>.walletconnect-modal__close__icon {<br>  position: relative;<br>  top: 7px;<br>  right: 0;<br>  display: flex;<br>  align-items: center;<br>  justify-content: center;<br>  transform: rotate(45deg);<br>}<br><br>.walletconnect-modal__close__line1 {<br>  position: absolute;<br>  width: 100%;<br>  border: 1px solid rgb(48, 52, 59);<br>}<br><br>.walletconnect-modal__close__line2 {<br>  position: absolute;<br>  width: 100%;<br>  border: 1px solid rgb(48, 52, 59);<br>  transform: rotate(90deg);<br>}<br><br>.walletconnect-qrcode__base {<br>  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);<br>  background: rgba(37, 41, 46, 0.95);<br>  height: 100%;<br>  left: 0;<br>  pointer-events: auto;<br>  position: fixed;<br>  top: 0;<br>  transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);<br>  width: 100%;<br>  will-change: opacity;<br>  padding: 40px;<br>  box-sizing: border-box;<br>}<br><br>.walletconnect-qrcode__text {<br>  color: rgba(60, 66, 82, 0.6);<br>  font-size: 16px;<br>  font-weight: 600;<br>  letter-spacing: 0;<br>  line-height: 1.1875em;<br>  margin: 10px 0 20px 0;<br>  text-align: center;<br>  width: 100%;<br>}<br><br>@media only screen and (max-width: 768px) {<br>  .walletconnect-qrcode__text {<br>    font-size: 4vw;<br>  }<br>}<br><br>@media only screen and (max-width: 320px) {<br>  .walletconnect-qrcode__text {<br>    font-size: 14px;<br>  }<br>}<br><br>.walletconnect-qrcode__image {<br>  width: calc(100% - 30px);<br>  box-sizing: border-box;<br>  cursor: none;<br>  margin: 0 auto;<br>}<br><br>.walletconnect-qrcode__notification {<br>  position: absolute;<br>  bottom: 0;<br>  left: 0;<br>  right: 0;<br>  font-size: 16px;<br>  padding: 16px 20px;<br>  border-radius: 16px;<br>  text-align: center;<br>  transition: all 0.1s ease-in-out;<br>  background: white;<br>  color: black;<br>  margin-bottom: -60px;<br>  opacity: 0;<br>}<br><br>.walletconnect-qrcode__notification.notification__show {<br>  opacity: 1;<br>}<br><br>@media only screen and (max-width: 768px) {<br>  .walletconnect-modal__header {<br>    height: 130px;<br>  }<br>  .walletconnect-modal__base {<br>    overflow: auto;<br>  }<br>}<br><br>@media only screen and (min-device-width: 415px) and (max-width: 768px) {<br>  #content {<br>    max-width: 768px;<br>    box-sizing: border-box;<br>  }<br>}<br><br>@media only screen and (min-width: 375px) and (max-width: 415px) {<br>  #content {<br>    max-width: 414px;<br>    box-sizing: border-box;<br>  }<br>}<br><br>@media only screen and (min-width: 320px) and (max-width: 375px) {<br>  #content {<br>    max-width: 375px;<br>    box-sizing: border-box;<br>  }<br>}<br><br>@media only screen and (max-width: 320px) {<br>  #content {<br>    max-width: 320px;<br>    box-sizing: border-box;<br>  }<br>}<br><br>.walletconnect-modal__base {<br>  -webkit-font-smoothing: antialiased;<br>  background: #ffffff;<br>  border-radius: 24px;<br>  box-shadow: 0 10px 50px 5px rgba(0, 0, 0, 0.4);<br>  font-family: ui-rounded, "SF Pro Rounded", "SF Pro Text", medium-content-sans-serif-font,<br>    -apple-system, BlinkMacSystemFont, ui-sans-serif, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,<br>    "Open Sans", "Helvetica Neue", sans-serif;<br>  margin-top: 41px;<br>  padding: 24px 24px 22px;<br>  pointer-events: auto;<br>  position: relative;<br>  text-align: center;<br>  transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);<br>  will-change: transform;<br>  overflow: visible;<br>  transform: translateY(-50%);<br>  top: 50%;<br>  max-width: 500px;<br>  margin: auto;<br>}<br><br>@media only screen and (max-width: 320px) {<br>  .walletconnect-modal__base {<br>    padding: 24px 12px;<br>  }<br>}<br><br>.walletconnect-modal__base .hidden {<br>  transform: translateY(150%);<br>  transition: 0.125s cubic-bezier(0.4, 0, 1, 1);<br>}<br><br>.walletconnect-modal__header {<br>  align-items: center;<br>  display: flex;<br>  height: 26px;<br>  left: 0;<br>  justify-content: space-between;<br>  position: absolute;<br>  top: -42px;<br>  width: 100%;<br>}<br><br>.walletconnect-modal__base .wc-logo {<br>  align-items: center;<br>  display: flex;<br>  height: 26px;<br>  margin-top: 15px;<br>  padding-bottom: 15px;<br>  pointer-events: auto;<br>}<br><br>.walletconnect-modal__base .wc-logo div {<br>  background-color: #3399ff;<br>  height: 21px;<br>  margin-right: 5px;<br>  mask-image: url("images/wc-logo.svg") center no-repeat;<br>  width: 32px;<br>}<br><br>.walletconnect-modal__base .wc-logo p {<br>  color: #ffffff;<br>  font-size: 20px;<br>  font-weight: 600;<br>  margin: 0;<br>}<br><br>.walletconnect-modal__base h2 {<br>  color: rgba(60, 66, 82, 0.6);<br>  font-size: 16px;<br>  font-weight: 600;<br>  letter-spacing: 0;<br>  line-height: 1.1875em;<br>  margin: 0 0 19px 0;<br>  text-align: center;<br>  width: 100%;<br>}<br><br>.walletconnect-modal__base__row {<br>  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);<br>  align-items: center;<br>  border-radius: 20px;<br>  cursor: pointer;<br>  display: flex;<br>  height: 56px;<br>  justify-content: space-between;<br>  padding: 0 15px;<br>  position: relative;<br>  margin: 0px 0px 8px;<br>  text-align: left;<br>  transition: 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);<br>  will-change: transform;<br>  text-decoration: none;<br>}<br><br>.walletconnect-modal__base__row:hover {<br>  background: rgba(60, 66, 82, 0.06);<br>}<br><br>.walletconnect-modal__base__row:active {<br>  background: rgba(60, 66, 82, 0.06);<br>  transform: scale(0.975);<br>  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);<br>}<br><br>.walletconnect-modal__base__row__h3 {<br>  color: #25292e;<br>  font-size: 20px;<br>  font-weight: 700;<br>  margin: 0;<br>  padding-bottom: 3px;<br>}<br><br>.walletconnect-modal__base__row__right {<br>  align-items: center;<br>  display: flex;<br>  justify-content: center;<br>}<br><br>.walletconnect-modal__base__row__right__app-icon {<br>  border-radius: 8px;<br>  height: 34px;<br>  margin: 0 11px 2px 0;<br>  width: 34px;<br>  background-size: 100%;<br>  box-shadow: 0 4px 12px 0 rgba(37, 41, 46, 0.25);<br>}<br><br>.walletconnect-modal__base__row__right__caret {<br>  height: 18px;<br>  opacity: 0.3;<br>  transition: 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);<br>  width: 8px;<br>  will-change: opacity;<br>}<br><br>.walletconnect-modal__base__row:hover .caret,<br>.walletconnect-modal__base__row:active .caret {<br>  opacity: 0.6;<br>}<br><br>.walletconnect-modal__mobile__toggle {<br>  width: 80%;<br>  display: flex;<br>  margin: 0 auto;<br>  position: relative;<br>  overflow: hidden;<br>  border-radius: 8px;<br>  margin-bottom: 18px;<br>  background: #d4d5d9;<br>}<br><br>.walletconnect-modal__single_wallet {<br>  display: flex;<br>  justify-content: center;<br>  margin-top: 7px;<br>  margin-bottom: 18px;<br>}<br><br>.walletconnect-modal__single_wallet a {<br>  cursor: pointer;<br>  color: rgb(64, 153, 255);<br>  font-size: 21px;<br>  font-weight: 800;<br>  text-decoration: none !important;<br>  margin: 0 auto;<br>}<br><br>.walletconnect-modal__mobile__toggle_selector {<br>  width: calc(50% - 8px);<br>  background: white;<br>  position: absolute;<br>  border-radius: 5px;<br>  height: calc(100% - 8px);<br>  top: 4px;<br>  transition: all 0.2s ease-in-out;<br>  transform: translate3d(4px, 0, 0);<br>}<br><br>.walletconnect-modal__mobile__toggle.right__selected .walletconnect-modal__mobile__toggle_selector {<br>  transform: translate3d(calc(100% + 12px), 0, 0);<br>}<br><br>.walletconnect-modal__mobile__toggle a {<br>  font-size: 12px;<br>  width: 50%;<br>  text-align: center;<br>  padding: 8px;<br>  margin: 0;<br>  font-weight: 600;<br>  z-index: 1;<br>}<br><br>.walletconnect-modal__footer {<br>  display: flex;<br>  justify-content: center;<br>  margin-top: 20px;<br>}<br><br>@media only screen and (max-width: 768px) {<br>  .walletconnect-modal__footer {<br>    margin-top: 5vw;<br>  }<br>}<br><br>.walletconnect-modal__footer a {<br>  cursor: pointer;<br>  color: #898d97;<br>  font-size: 15px;<br>  margin: 0 auto;<br>}<br><br>@media only screen and (max-width: 320px) {<br>  .walletconnect-modal__footer a {<br>    font-size: 14px;<br>  }<br>}<br><br>.walletconnect-connect__buttons__wrapper {<br>  max-height: 44vh;<br>}<br><br>.walletconnect-connect__buttons__wrapper__android {<br>  margin: 50% 0;<br>}<br><br>.walletconnect-connect__buttons__wrapper__wrap {<br>  display: grid;<br>  grid-template-columns: repeat(4, 1fr);<br>  margin: 10px 0;<br>}<br><br>@media only screen and (min-width: 768px) {<br>  .walletconnect-connect__buttons__wrapper__wrap {<br>    margin-top: 40px;<br>  }<br>}<br><br>.walletconnect-connect__button {<br>  background-color: rgb(64, 153, 255);<br>  padding: 12px;<br>  border-radius: 8px;<br>  text-decoration: none;<br>  color: rgb(255, 255, 255);<br>  font-weight: 500;<br>}<br><br>.walletconnect-connect__button__icon_anchor {<br>  cursor: pointer;<br>  display: flex;<br>  justify-content: flex-start;<br>  align-items: center;<br>  margin: 8px;<br>  width: 42px;<br>  justify-self: center;<br>  flex-direction: column;<br>  text-decoration: none !important;<br>}<br><br>@media only screen and (max-width: 320px) {<br>  .walletconnect-connect__button__icon_anchor {<br>    margin: 4px;<br>  }<br>}<br><br>.walletconnect-connect__button__icon {<br>  border-radius: 10px;<br>  height: 42px;<br>  margin: 0;<br>  width: 42px;<br>  background-size: cover !important;<br>  box-shadow: 0 4px 12px 0 rgba(37, 41, 46, 0.25);<br>}<br><br>.walletconnect-connect__button__text {<br>  color: #424952;<br>  font-size: 2.7vw;<br>  text-decoration: none !important;<br>  padding: 0;<br>  margin-top: 1.8vw;<br>  font-weight: 600;<br>}<br><br>@media only screen and (min-width: 768px) {<br>  .walletconnect-connect__button__text {<br>    font-size: 16px;<br>    margin-top: 12px;<br>  }<br>}<br><br>.walletconnect-search__input {<br>  border: none;<br>  background: #d4d5d9;<br>  border-style: none;<br>  padding: 8px 16px;<br>  outline: none;<br>  font-style: normal;<br>  font-stretch: normal;<br>  font-size: 16px;<br>  font-style: normal;<br>  font-stretch: normal;<br>  line-height: normal;<br>  letter-spacing: normal;<br>  text-align: left;<br>  border-radius: 8px;<br>  width: calc(100% - 16px);<br>  margin: 0;<br>  margin-bottom: 8px;<br>}<br></style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="mainContainer"><div class="dataContainer"><div class="header">🤪 Yooooo!</div><div class="bio">Antony here. I'm happy you made it this far! You're well on your way to creating your first dapp on Algorand!</div><div class="count">0</div><button class="mathButton">Add</button><button class="mathButton">Deduct</button><button class="mathButton">Disconnect Wallet</button></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js.download"></script><script src="./React App_files/vendors_main.chunk.js.download"></script><script src="./React App_files/main.chunk.js.download"></script>
+
+</body></html>
